@@ -1,0 +1,12 @@
+default:
+    suites:
+        webui:
+            contexts:
+                - App\Features\Context\FeatureContext
+                - App\Features\Context\PhpWebServerContext
+    extensions:
+        Behat\MinkExtension:
+            base_url:  'http://localhost:8000'
+            sessions:
+                default:
+                    goutte: ~
